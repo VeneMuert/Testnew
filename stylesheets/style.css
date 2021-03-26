@@ -1,0 +1,50 @@
+html{
+	font-family: Amita, arial;
+	overflow: visible;
+}
+div fieldset{
+	background-color: #96b1cc;	
+	border-radius: 1em;
+	margin: auto;
+	width: 450px;
+	height: 450px;	
+	}
+div h2{
+	position: relative;
+	background-color: hwb(80, 40%, 0%);
+	font-size: 25px;
+	text-align: center;
+	margin: auto;}
+
+nav li, nav a{
+	display: inline;
+	text-decoration: none;
+	color:blanchedalmond;	
+}
+#headers{	
+	position: sticky;
+	top:0;	
+	background:rgba(60, 60, 82, 0.904);	
+	height: 65px;	
+	z-index:100;
+	opacity:0.9;
+	outline: 5px dashed #029;
+}
+#text{		
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+	align-items: center;
+}
+ul{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-evenly;
+}
+#logo{position: relative; left:5rem}
+.logito{
+	max-width: 25%;	
+}
+
+
+

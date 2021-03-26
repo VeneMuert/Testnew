@@ -19,7 +19,7 @@ div h2{
 nav li, nav a{
 	display: inline;
 	text-decoration: none;
-	color:blanchedalmond;	
+	color:rgb(212, 148, 51);
 }
 #headers{	
 	position: sticky;
@@ -27,8 +27,7 @@ nav li, nav a{
 	background:rgba(60, 60, 82, 0.904);	
 	height: 65px;	
 	z-index:100;
-	opacity:0.9;
-	outline: 5px dashed #029;
+	opacity:0.9;	
 }
 #text{		
 	display: flex;
@@ -41,7 +40,10 @@ ul{
 	display: flex;
 	justify-content: space-evenly;
 }
-#logo{position: relative; left:5rem}
+#logo{
+	position: relative;
+	left:5rem
+}
 .logito{
 	max-width: 25%;	
 }

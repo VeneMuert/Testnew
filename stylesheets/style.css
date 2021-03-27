@@ -1,51 +1,51 @@
+:root{
+	--TamNav: 4.625rem;
+	--bgNav:#939597;
+	--inkWell:#363945;
+	--Buttercream:#EFE1CE;
+}
 html{
 	font-family: Amita, arial;
 	overflow: visible;
 }
-div fieldset{
-	background-color: #96b1cc;	
-	border-radius: 1em;
-	margin: auto;
-	width: 450px;
-	height: 450px;	
-	}
-div h2{
-	position: relative;
-	background-color: hwb(80, 40%, 0%);
-	font-size: 25px;
-	text-align: center;
-	margin: auto;}
-
-nav li, nav a{
-	display: inline;
+h2{
+	font-size: 1.5em;
+}
+a{
 	text-decoration: none;
+}
+nav a:not(:first-child){
+	display: none;	
 	color:rgb(212, 148, 51);
 }
 #headers{	
 	position: sticky;
 	top:0;	
-	background:rgba(60, 60, 82, 0.904);	
-	height: 65px;	
-	z-index:100;
-	opacity:0.9;	
+	background:var(--bgNav);
+	height: var(--TamNav);			
 }
 #text{		
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;	
+	justify-content:space-around;	
 	align-items: center;
-}
-ul{
-	flex-grow: 1;
-	display: flex;
-	justify-content: space-evenly;
+	min-height: var(--TamNav);
 }
 #logo{
 	position: relative;
-	left:5rem
+	max-width: 4.6875rem;
+	
 }
 .logito{
-	max-width: 25%;	
+	max-width: 100%;	
+}
+.titulo{
+	color:var(--Buttercream);
+	padding:0 1.4375rem 0 0;
+}
+#menuBars{
+	font-size: 2rem;
+	color:var(--inkWell);	
 }
 
 

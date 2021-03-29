@@ -3,21 +3,27 @@
 	--bgNav:#939597;
 	--inkWell:#363945;
 	--Buttercream:#EFE1CE;
+	--textd45dg: -webkit-linear-gradient(45deg, #efe1ce, #f0e4d2, #f2e6d7, #f3e9db, #f5ece0, #f6efe4, #f8f1e9, #f9f4ed, #fbf7f2, #fcfaf6, #fefcfb, #ffffff);
 }
 html{
-	font-family: Amita, arial;
-	overflow: visible;
+	font-family: 'Amita', cursive;	
 }
 h2{
-	font-size: 1.5em;
+	font-size: 1.5em;	
 }
 a{
 	text-decoration: none;
 }
-nav a:not(:first-child){
-	display: none;	
-	color:rgb(212, 148, 51);
+@media only screen and (min-width:769px){
+	.menuBig{
+		display: none;
+	}
+	#menuBars{
+		display: none;
+	}
+	
 }
+
 #headers{	
 	position: sticky;
 	top:0;	
@@ -33,19 +39,45 @@ nav a:not(:first-child){
 }
 #logo{
 	position: relative;
-	max-width: 4.6875rem;
-	
+	max-width: var(--TamNav);
 }
 .logito{
 	max-width: 100%;	
 }
-.titulo{
-	color:var(--Buttercream);
+.titulo{	
 	padding:0 1.4375rem 0 0;
+	background: var(--textd45dg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-#menuBars{
+#menuBars{	
 	font-size: 2rem;
 	color:var(--inkWell);	
+}
+#menuBars:hover + .menuBig {
+	left:0;
+
+}
+.menuBig{
+	display: flex;
+	flex-flow: column wrap;
+	background: var(--bgNav);
+	width: 100%;
+	align-items: center;
+	border: 3px double #365302;
+	position: relative;
+	left:-200%;
+}
+#mobilMenu{
+	padding: 0.625rem;
+	background: var(--textd45dg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#pcMenu{	
+	background: var(--textd45dg);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 

@@ -14,6 +14,7 @@ h2{
 a{
 	text-decoration: none;
 }
+div{outline: 1px solid black;}
 @media only screen and (min-width:769px){
 	.menuBig{
 		display: none;
@@ -21,14 +22,28 @@ a{
 	#menuBars{
 		display: none;
 	}
-	
+	.mainFlex{
+		display: block;
+	}
+}
+@media only screen and (max-width:769px){
+	#pcMenu{
+		display: none;
+	}
+}
+.mainFlex{
+	display: flex;
+	flex-flow: row wrap;
+	max-height: 100vh;
 }
 
 #headers{	
 	position: sticky;
 	top:0;	
 	background:var(--bgNav);
-	height: var(--TamNav);			
+	height: var(--TamNav);
+	/*view pc*/
+	flex: 0 0 100%;			
 }
 #text{		
 	display: flex;
@@ -56,7 +71,6 @@ a{
 }
 #menuBars:hover + .menuBig {
 	left:0;
-
 }
 .menuBig{
 	display: flex;
@@ -67,6 +81,9 @@ a{
 	border: 3px double #365302;
 	position: relative;
 	left:-200%;
+}
+.menuBig:hover{
+	left: 0;	
 }
 #mobilMenu{
 	padding: 0.625rem;
@@ -79,6 +96,11 @@ a{
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+#pcMenu:hover{
+	opacity: 0.5;
+	
+}
+
 
 
 

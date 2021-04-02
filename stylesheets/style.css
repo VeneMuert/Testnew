@@ -1,9 +1,14 @@
 :root{
+	/*Tamaño*/
 	--TamNav: 4.625rem;
+	/*colores*/
 	--bgNav:#939597;
 	--inkWell:#363945;
 	--Buttercream:#EFE1CE;
 	--textd45dg: -webkit-linear-gradient(45deg, #efe1ce, #f0e4d2, #f2e6d7, #f3e9db, #f5ece0, #f6efe4, #f8f1e9, #f9f4ed, #fbf7f2, #fcfaf6, #fefcfb, #ffffff);
+	--separador:#353844;
+	/*border*/
+	--lineabajo: 1px solid var(--separador);
 }
 html{
 	font-family: 'Amita', cursive;	
@@ -14,7 +19,6 @@ h2{
 a{
 	text-decoration: none;
 }
-div{outline: 1px solid black;}
 @media only screen and (min-width:769px){
 	.menuBig{
 		display: none;
@@ -24,7 +28,7 @@ div{outline: 1px solid black;}
 	}
 	.mainFlex{
 		display: block;
-	}
+	}	
 }
 @media only screen and (max-width:769px){
 	#pcMenu{
@@ -34,15 +38,15 @@ div{outline: 1px solid black;}
 .mainFlex{
 	display: flex;
 	flex-flow: row wrap;
-	max-height: 100vh;
+	height: auto;
 }
-
 #headers{	
 	position: sticky;
 	top:0;	
 	background:var(--bgNav);
 	height: var(--TamNav);
-	/*view pc*/
+	border-bottom: var(--lineabajo);
+	/*view flex si el body principal es fle container*/
 	flex: 0 0 100%;			
 }
 #text{		
@@ -91,16 +95,46 @@ div{outline: 1px solid black;}
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-#pcMenu{	
+#pcMenu{
 	background: var(--textd45dg);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 #pcMenu:hover{
-	opacity: 0.5;
-	
+	opacity: 0.5;	
 }
-
-
-
+#pcMenu::after{
+	position: relative;
+	width: 100%;
+	display: none;
+	height: 0.1875rem;
+	background: var(--Buttercream);	
+	content: "";
+	top: 1.378125rem;
+}
+#pcMenu:hover::after{
+	display: block;	
+}
+/*template de contenido dividido con flex*/
+.izquierda{
+	flex: 0 0 20%;
+	min-height: 75vh;
+	max-height: 80vh;
+	border: var(--lineabajo);
+}
+.medio{
+	flex: 0 0 60%;
+	border: var(--lineabajo);
+}
+.derecha{
+	flex:0 0 20%;
+	border: var(--lineabajo);
+}
+.final{
+	flex: 0 0 100%;
+	border: var(--lineabajo);
+}
+.contenido{
+	max-width: 30%;
+}
 
